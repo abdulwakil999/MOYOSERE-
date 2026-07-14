@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-...
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>For Moyosere 🐝</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.4/babel.min.js"></script>
+<style>
+  :root{
+    --night-1:#0b0713;
+    --night-2:#160f28;
+    --gold:#f0b429;
+    --gold-lite:#f9dd7a;
+    --gold-deep:#b8860b;
+    --magic:#b14aff;
+    --magic-2:#5ad1ff;
+  }
+  /* (CSS styles omitted for brevity) */
+</style>
 </head>
 <body>
-...
+<div id="root"></div>
+<script type="text/babel">
+const App = () => {
+  const [isChestOpen, setIsChestOpen] = React.useState(false);
+  const [isBalloonVisible, setIsBalloonVisible] = React.useState(false);
+  const [isConfettiActive, setIsConfettiActive] = React.useState(false);
+  const [isFlashActive, setIsFlashActive] = React.useState(false);
+  const [isScoldVisible, setIsScoldVisible] = React.useState(false);
+
+  const handleChestClick = () => {
+    setIsChestOpen(true);
+    setTimeout(() => setIsBalloonVisible(true), 800);
+    setTimeout(() => setIsConfettiActive(true), 1500);
+    setTimeout(() => setIsFlashActive(true), 2000);
+    setTimeout(() => setIsScoldVisible(true), 3000);
+  };
+
+  return (
+    <div className="stage">
+      {/* (React components omitted for brevity) */}
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+</script>
 </body>
 </html>
